@@ -38,6 +38,10 @@ jobs:
     - name: Lint
       continue-on-error: true
       run: yarn lint
+    - name: Install ffmpeg
+      run: |
+        sudo apt update
+        sudo apt install ffmpeg
     - name: Test
       run: yarn test
       env:
