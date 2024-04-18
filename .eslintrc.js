@@ -3,6 +3,9 @@ module.exports = {
         "es6": true,
         "node": true
     },
+    "ignorePatterns": [
+        "test/*"
+    ],
     "extends": "eslint:recommended",
     "rules": {
         "accessor-pairs": "error",
