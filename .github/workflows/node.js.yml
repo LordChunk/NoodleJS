@@ -36,7 +36,6 @@ jobs:
     - name: Install Dependencies
       run: yarn --frozen-lockfile
     - name: Lint
-      continue-on-error: true
       run: yarn lint
     - name: Install ffmpeg
       run: |
