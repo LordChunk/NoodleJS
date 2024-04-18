@@ -1,3 +1,7 @@
+/* eslint-disable no-inline-comments */
+/* eslint-disable line-comment-position */
+// Warnings are disabled for this code-block:
+// https://github.com/LordChunk/NoodleJS/blob/e7eab24f8b30ab1616cfcf1d6e7896365abf4211/src/Connection.js#L159-L170
 const tls = require('tls');
 const Protobuf = require('./Protobuf')
 const Promise = require('bluebird')
@@ -111,7 +115,7 @@ class Connection extends EventEmitter {
             return;
         }
 
-        // It's an "Encoded audio data packet" (CELT Alpha, Speex, CELT Beta 
+        // It's an "Encoded audio data packet" (CELT Alpha, Speex, CELT Beta
         // or Opus). So it's safe to parse the header
 
         // Offset in data from where we are currently reading
@@ -143,7 +147,7 @@ class Connection extends EventEmitter {
         const opusHeader = varInt.value;
 
         const opusLength = opusHeader & 0x1FFF;
-        const lastFrame = (opusHeader & 0x2000) ? true : false;
+        const lastFrame = !!(opusHeader & 0x2000);
 
         //console.debug("\topus header:" + opusHeader + ' length:' + opusLength + ' lastFrame:' + lastFrame);
 
@@ -155,12 +159,12 @@ class Connection extends EventEmitter {
         //console.debug("\tDECODED DATA LENGTH:" + decoded.length + ' DATA:', decoded);
 
         const voiceData = {
-            audioType: audioType,        // For the moment, will be 4 = OPUS
+            audioType,                   // For the moment, will be 4 = OPUS
             whisperTarget: audioTarget,
-            sender: sender,              // Session ID of the user sending the audio
-            sequence: sequence,
-            lastFrame: lastFrame,        // Don't rely on it!
-            opusData: opusData,          // Voice data encoded, as it came in
+            sender,                      // Session ID of the user sending the audio
+            sequence,
+            lastFrame,                   // Don't rely on it!
+            opusData,                    // Voice data encoded, as it came in
             decodedData: decoded         // Voice data decoded (48000, 1ch, 16bit)
         }
 
