@@ -183,7 +183,7 @@ class Client extends EventEmitter {
             if (!this.channels.has(channelId)) {
                 return Promise.reject('ChannelId unknown')
             }
-            return this.connection.writeProto('VoiceTarget', {id: targetId, targets: [{channelId: channelId}]})
+            return this.connection.writeProto('VoiceTarget', {id: targetId, targets: [{channelId}]})
         }
     }
 

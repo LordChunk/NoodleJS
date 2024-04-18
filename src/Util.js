@@ -43,8 +43,8 @@ class Util {
     }
 
     static fromVarInt(buf) {
-        // TODO: 111110__ + varint	Negative recursive varint
-        // TODO: 111111xx       	Byte-inverted negative two bit number (~xx)
+        // TODO: 111110__ + varint  Negative recursive varint
+        // TODO: 111111xx           Byte-inverted negative two bit number (~xx)
 
         var retVal = {
             value: 0,
