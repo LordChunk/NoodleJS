@@ -26,7 +26,7 @@
     "@discordjs/opus": "^0.9.0",
     "bluebird": "^3.7.2",
     "fluent-ffmpeg": "^2.1.2",
-    "protobufjs": "^6.9.0"
+    "protobufjs": "^7.2.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.0.0",
