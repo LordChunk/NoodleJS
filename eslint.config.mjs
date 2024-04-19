@@ -1,11 +1,12 @@
 import js from "@eslint/js";
+import globals from "globals";
 
 export default [
     js.configs.recommended,
     {
         languageOptions: {
-            ecmaVersion: 6,
-            // sourceType: 
+            ecmaVersion: 2015,
+            globals: globals.node
         },
         ignores: [
             "test/*"
