@@ -1,14 +1,14 @@
 {
   "name": "noodle.js",
-  "version": "1.5.0",
-  "homepage": "https://github.com/Gielert/NoodleJS",
-  "bugs": "https://github.com/Gielert/NoodleJS/issues",
+  "version": "1.5.1",
+  "homepage": "https://github.com/LordChunk/NoodleJS",
+  "bugs": "https://github.com/LordChunk/NoodleJS/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Gielert/NoodleJS.git"
+    "url": "https://github.com/LordChunk/NoodleJS.git"
   },
   "engines": {
-    "node": ">=10.0.0"
+    "node": ">=18.0.0"
   },
   "description": "A NodeJS mumble client",
   "main": "src/Client.js",
@@ -20,7 +20,6 @@
     "NodeJS",
     "Mumble"
   ],
-  "author": "Michiel",
   "license": "MIT",
   "dependencies": {
     "@discordjs/opus": "^0.9.0",
