@@ -155,7 +155,7 @@ class Connection extends EventEmitter {
 
         //console.debug("\tOPUS DATA LENGTH:" + opusData.length + ' DATA:', opusData);
 
-        const decoded = this.currentEncoder.decode(opusData);
+        //const decoded = this.currentEncoder.decode(opusData);
         //console.debug("\tDECODED DATA LENGTH:" + decoded.length + ' DATA:', decoded);
 
         const voiceData = {
@@ -165,7 +165,7 @@ class Connection extends EventEmitter {
             sequence,
             lastFrame,                   // Don't rely on it!
             opusData,                    // Voice data encoded, as it came in
-            decodedData: decoded         // Voice data decoded (48000, 1ch, 16bit)
+            decodedData: () => this.currentEncoder.decode(opusData) // Voice data decoded (48000, 1ch, 16bit)
         }
 
         this.emit('voiceData', voiceData);
