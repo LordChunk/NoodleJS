@@ -1,24 +1,33 @@
 export = ClientOptions;
 
+// Generated based on: src/Constants.js
+
 declare type ClientOptions = {
   /**
-   * The address of the Mumble server
+   * The URL of the Mumble server
    * @type {String}
    */
-  address: string;
+  url?: string;
   /**
-   * The username of the client
+   * The port the Mumble server is listening on
    * @type {String}
    */
-  name: string;
+  port?: string;
   /**
-   * The password of the client
+   * Whether we should reject invalid certificates
+   * @type {Boolean}
+   */
+  rejectUnauthorized?: boolean;
+  /**
+   * The name of the user that will connect
    * @type {String}
    */
-  password: string;
+  name?: string;
   /**
-   * The tokens to use to connect to the server
-   * @type {Array<String>}
+   * A password when the server has one
+   * @type {String}
    */
-  tokens: Array<string>;
+  password?: string;
+
+  tokens?: Array<string>;
 };
