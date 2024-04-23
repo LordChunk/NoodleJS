@@ -1,4 +1,5 @@
 export = Client;
+
 /**
  * The main class for interacting with the Mumble server
  * @extends EventEmitter
@@ -85,3 +86,4 @@ import EventEmitter_1 = require("events");
 import EventEmitter = EventEmitter_1.EventEmitter;
 import Dispatcher = require("./voice/Dispatcher");
 import TextMessage = require("./handlers/TextMessage");
+import ClientOptions = require("./ClientOptions");

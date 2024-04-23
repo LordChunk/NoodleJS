@@ -21,3 +21,4 @@ declare class Channel {
 }
 import Client from "../Client";
 import Collection = require("./Collection");
+import ChannelData = require("./ChannelData");
