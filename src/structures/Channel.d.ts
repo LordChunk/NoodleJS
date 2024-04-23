@@ -19,4 +19,5 @@ declare class Channel {
     position: any;
     sendMessage(message: any, recursive: any): any;
 }
+import Client from "../Client";
 import Collection = require("./Collection");
